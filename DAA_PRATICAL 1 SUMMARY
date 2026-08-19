@@ -1,0 +1,11 @@
+ubble Sort compares adjacent elements and swaps them when they are in the wrong order. Its best-case complexity is O(n), while average and worst cases are O(n²).
+
+Quick Sort selects a pivot, partitions the array around the pivot, and recursively sorts the two parts. Its best and average cases are O(n log n), while the worst case is O(n²).
+
+Insertion Sort builds the sorted array one element at a time by inserting each element into its correct position. Its best-case complexity is O(n), and average and worst cases are O(n²).
+
+Selection Sort repeatedly finds the smallest element from the unsorted portion and places it in the correct position. Its best, average, and worst cases are all O(n²).
+
+Merge Sort divides the array into smaller halves, recursively sorts them, and then merges the sorted halves. Its best, average, and worst-case complexity are all O(n log n).
+
+Overall, the file demonstrates and compares five common sorting algorithms based on their working method, execution time, and time complexity. Among them, Merge Sort consistently provides O(n log n) performance, while Quick Sort is also efficient on average.
