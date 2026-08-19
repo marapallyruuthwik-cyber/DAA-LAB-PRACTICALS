@@ -1,0 +1,7 @@
+This program demonstrates and compares Linear Search and Binary Search in C++. A sorted array of 100 elements is created, and the user enters an element to search for. Both searching algorithms are executed, and their execution time in microseconds is measured using the chrono library.
+
+Linear Search checks each element one by one until the required element is found or the array ends. Its time complexity is O(n).
+
+Binary Search works on the sorted array by repeatedly dividing the search range into half. Its time complexity is O(log n).
+
+The program displays whether the element was found, its index, and the time taken by each search method. Overall, the program shows that Binary Search is more efficient than Linear Search for a sorted array, especially as the size of the array increases.
