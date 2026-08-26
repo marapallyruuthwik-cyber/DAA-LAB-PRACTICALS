@@ -1,0 +1,1 @@
+The 0/1 Knapsack Problem was successfully implemented using Dynamic Programming in Python. The algorithm uses a DP table to calculate the maximum profit that can be obtained without exceeding the given knapsack capacity. Each item can either be selected once or not selected. The solution has a time complexity of O(n × W) and space complexity of O(n × W).
