@@ -1,0 +1,45 @@
+# Practical 9: Prim's Algorithm
+
+import sys
+
+def prim(graph, vertices):
+    selected = [False] * vertices
+    selected[0] = True
+    edges = 0
+    total_cost = 0
+
+    print("Edges in Minimum Spanning Tree:")
+
+    while edges < vertices - 1:
+        minimum = sys.maxsize
+        x = 0
+        y = 0
+
+        for i in range(vertices):
+            if selected[i]:
+                for j in range(vertices):
+                    if not selected[j] and graph[i][j]:
+                        if graph[i][j] < minimum:
+                            minimum = graph[i][j]
+                            x = i
+                            y = j
+
+        print(f"{x} - {y} : {minimum}")
+        total_cost += minimum
+        selected[y] = True
+        edges += 1
+
+    print("Total cost of Minimum Spanning Tree:", total_cost)
+
+
+vertices = int(input("Enter number of vertices: "))
+
+print("Enter adjacency matrix (0 for no edge):")
+graph = []
+
+for i in range(vertices):
+    row = list(map(int, input().split()))
+    graph.append(row)
+
+prim(graph, vertices)
+
