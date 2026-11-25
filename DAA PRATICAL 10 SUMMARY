@@ -1,0 +1,3 @@
+Kruskal's algorithm is a greedy algorithm used to find the Minimum Spanning Tree of a connected, weighted graph. It selects edges in increasing order of weight and avoids creating cycles. The algorithm stops when V-1 edges have been selected.
+
+Time Complexity: \(O(E\log E)\)
