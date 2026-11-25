@@ -1,3 +1,0 @@
-Floyd–Warshall algorithm is used to find the shortest distance between every pair of vertices in a graph. It works by checking whether travelling through an intermediate vertex gives a shorter path. It uses dynamic programming and can handle negative edge weights, but not negative-weight cycles.
-
-Time Complexity: \(O(V^3)\)
