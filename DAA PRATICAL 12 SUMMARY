@@ -1,0 +1,3 @@
+he Travelling Salesman Problem (TSP) is used to find the minimum-cost tour in which a salesman visits every city exactly once and returns to the starting city. In this program, all possible routes are generated and their costs are calculated. The route with the minimum cost is selected as the optimal tour.
+
+Time Complexity: \(O(n!)\) (brute-force approach)
