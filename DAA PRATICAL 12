@@ -1,0 +1,40 @@
+# Travelling Salesman Problem
+
+from itertools import permutations
+
+# Cost matrix of cities
+cost = [
+    [0, 10, 15, 20],
+    [10, 0, 35, 25],
+    [15, 35, 0, 30],
+    [20, 25, 30, 0]
+]
+
+n = len(cost)
+
+min_cost = float('inf')
+best_path = []
+
+# Fix city 0 as the starting city
+cities = list(range(1, n))
+
+# Generate all possible routes
+for route in permutations(cities):
+    path = [0] + list(route) + [0]
+
+    total_cost = 0
+
+    # Calculate total route cost
+    for i in range(len(path) - 1):
+        total_cost += cost[path[i]][path[i + 1]]
+
+    # Update minimum cost
+    if total_cost < min_cost:
+        min_cost = total_cost
+        best_path = path
+
+print("Minimum Cost:", min_cost)
+
+print("Optimal Tour:", end=" ")
+for city in best_path:
+    print(city, end=" ")
