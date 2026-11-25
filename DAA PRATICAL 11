@@ -1,0 +1,34 @@
+# Floyd-Warshall Algorithm
+
+INF = 99999
+
+# Distance matrix
+graph = [
+    [0, 5, INF, 10],
+    [INF, 0, 3, INF],
+    [INF, INF, 0, 1],
+    [INF, INF, INF, 0]
+]
+
+vertices = len(graph)
+
+# Floyd-Warshall algorithm
+for k in range(vertices):
+    for i in range(vertices):
+        for j in range(vertices):
+            if graph[i][k] != INF and graph[k][j] != INF:
+                graph[i][j] = min(
+                    graph[i][j],
+                    graph[i][k] + graph[k][j]
+                )
+
+# Display shortest distance matrix
+print("Shortest Distance Matrix:")
+
+for row in graph:
+    for value in row:
+        if value == INF:
+            print("INF", end=" ")
+        else:
+            print(value, end=" ")
+    print()
